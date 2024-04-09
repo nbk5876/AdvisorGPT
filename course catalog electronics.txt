@@ -1,0 +1,13 @@
+
+Course ID,Title,Description,Prerequisites,Credits,Category
+ET101,Basic Electronics,Introduction to basic electronic concepts,None,3,Core
+ET102,Circuit Analysis,In-depth circuit analysis techniques,ET101,3,Core
+ET103,Digital Systems,Fundamentals of digital electronics,ET101,3,Core
+ET201,Microcontrollers,Programming and applications of microcontrollers,ET103,3,Core
+ET202,Communication Systems,Principles of analog and digital communication systems,ET102,3,Core
+MAT101,College Mathematics,Mathematical concepts in technical applications,None,3,General Education
+PHY101,Physics for Technicians,Basic principles of physics relevant to electronics,MAT101,3,General Education
+ETE101,Electronic Fabrication,Techniques for assembling electronic components,None,2,Elective
+ETE102,Renewable Energy Systems,Introduction to renewable energy systems and their electronic components,None,2,Elective
+ETE103,Robotics and Automation,Overview of robotics and automation in the electronics industry,ET103,2,Elective
+COM101,Technical Communication,Writing and presentation skills for technical fields,None,3,General Education
