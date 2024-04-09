@@ -13,7 +13,7 @@ def main():
 
 	user_query = "Student S001 is an Electronics Technician Associate degree candidate scheduled to graduate next quarter. They have completed all required courses except PHY101, which has been cancelled for the next quarter. The degree requires 3 credits of general education science. Here is the relevant course data and student record. Can you identify an alternative path to graduation for S001?"
 	user_query = "Student S001 is an Electronics Technician Associate degree candidate scheduled to graduate at the end of the next quarter. What classes should this student take in order to be positioned to graduate on schedule?"
-	#user_query = "Why did the fox jump over the moon?" 
+	#user_query = "Why did the fox jump over the moon?ZZZZZZZ" 
 	#user_query = "Is this student missing any courses?"
 
 	#-----------------------------------------------------------
