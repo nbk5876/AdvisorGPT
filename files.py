@@ -1,6 +1,6 @@
 #============================================================
 # files.py
-# Purpose: Read data course data from local drive
+# Purpose: Read data course data from local drive 
 #============================================================
 import csv
 
