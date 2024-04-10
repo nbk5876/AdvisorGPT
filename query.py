@@ -14,7 +14,7 @@ def process_query(user_query, course_cat, stu_rec):
              f"Based on the above information, {user_query}"
 
     completion = client.chat.completions.create(
-        model="gpt-3.5-turbo",
+        model="gpt-4",
         messages=[
             {"role": "system", "content": "You are an AI that provides academic advising."},
             {"role": "user", "content": prompt}
@@ -23,5 +23,6 @@ def process_query(user_query, course_cat, stu_rec):
 
     print(completion.choices[0].message)
 
-    return completion.choices[0].message
+    #return completion.choices[0].message
+    return completion.choices[0].message.content
 

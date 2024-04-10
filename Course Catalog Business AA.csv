@@ -1,0 +1,15 @@
+﻿Course ID,Title,Description,Prerequisites,Credits,Category
+BUS101,Introduction to Business,"Provides an overview of various aspects of business, including management, marketing, and finance.",None,3,Core
+ACC102,Financial Accounting,"Introduction to accounting principles, financial statements, and the accounting cycle.",None,3,Core
+ECO103,Microeconomics,"Examines the economic behavior of individuals, firms, and markets, focusing on supply and demand.",None,3,Core
+ECO104,Macroeconomics,"Explores national economic performance, the financial system, and government's role in the economy.",None,3,Core
+MGT105,Principles of Management,"Covers foundational theories and practices of management, including planning, organizing, and leading.",None,3,Core
+MKT106,Principles of Marketing,"Introduction to marketing concepts, strategies, and research, with a focus on customer behavior.",None,3,Core
+BUS107,Business Law,"Examines legal principles in business, including contracts, property, and employer-employee relations.",None,3,Core
+BUS108,Business Communication,"Focuses on developing effective business writing and presentation skills.",None,3,Core
+BUS109,Business Ethics,"Explores ethical issues in business and the importance of ethical decision-making.",None,3,Core
+BUS201,Entrepreneurship,"Introduces the process of starting and managing a new business venture.",BUS101,3,Elective
+MKT202,Digital Marketing,"Covers online marketing strategies, including social media, content marketing, and SEO.",MKT106,3,Elective
+MGT203,Human Resource Management,"Examines the strategic role of HR management in organizations, including recruitment and development.",MGT105,3,Elective
+FIN204,Corporate Finance,"Introduction to financial management in corporations, including capital budgeting and structure.",ACC102,3,Elective
+IT205,Business Information Systems,"Explores the use of information systems in business for decision-making and competitive advantage.",None,3,Elective

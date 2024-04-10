@@ -19,12 +19,12 @@ def main():
 	#-----------------------------------------------------------
 	# Step 1 - Get the Course Catelog
 	#-----------------------------------------------------------
-	course_cat = get_course_cat("course catalog electronics.csv")
+	course_cat = get_course_cat("Course Catalog Electronics.csv")
 
 	#-----------------------------------------------------------
 	# Step 2 - Get the student's record
 	#-----------------------------------------------------------
-	stu_rec = get_stu_rec("student record S001.csv") 
+	stu_rec = get_stu_rec("Student Record S001.csv") 
 
 	#-----------------------------------------------------------
 	# Step 3 - Get final NLP text from GPT4

@@ -1,0 +1,10 @@
+Student ID,Course ID,Course Title,Quarter,Year,Grade,Credits
+S002,BUS101,Introduction to Business,Q1,Year 1,A,3
+S002,ACC102,Financial Accounting,Q1,Year 1,B+,3
+S002,ECO103,Microeconomics,Q1,Year 1,A-,3
+S002,ECO104,Macroeconomics,Q2,Year 1,B,3
+S002,MGT105,Principles of Management,Q2,Year 1,B,3
+S002,MKT106,Principles of Marketing,Q2,Year 1,A,3
+S002,BUS107,Business Law,Q3,Year 1,Enrolled,3
+S002,BUS108,Business Communication,Q3,Year 1,Enrolled,3
+S002,BUS109,Business Ethics,Q3,Year 1,Enrolled,3
