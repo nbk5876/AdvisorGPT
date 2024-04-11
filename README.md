@@ -8,6 +8,10 @@ The source code for the Curriculum Advisor Prototype is hosted on GitHub:
 
 [https://github.com/nbk5876/AdvisorGPT](https://github.com/nbk5876/AdvisorGPT)
 
+## Application Flow
+
+![Alt text](https://github.com/nbk5876/nbk5876.github.io/blob/main/AdvisorGPT/Advisor_Overview.png?raw=true "Advisor Overview")
+
 ## Description
 
 The Curriculum Advisor Prototype is an intelligent system designed to streamline academic advising for students. This tool aids in the planning of course schedules based on a student's academic history, current enrollment, and future degree requirements. It consists of several key components:
