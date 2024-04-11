@@ -22,9 +22,9 @@ In steps 1, 2, & 3, the query is created based on input data consisting of the p
 
 ## Description
 
-The Curriculum Advisor Prototype is an intelligent system designed to streamline academic advising for students. This tool aids in the planning of course schedules based on a student's academic history, current enrollment, and future degree requirements. It consists of several key components:
+The Curriculum Advisor Prototype is an intelligent application designed to streamline academic advising for students. This tool aids in the planning of course schedules based on a student's academic history, current enrollment, and future degree requirements. It consists of several key components:
 
-1. **Course Catalog**: A comprehensive list of courses available for an Associate  Certificate program, including course ID, title, description, prerequisites, credits, and category. This catalog is an essential resource for both advisors and students to understand the courses offered, their content, and how they fit into the overall curriculum.
+1. **Program Catalog**: A comprehensive list of courses available for an Associate  Certificate program, including course ID, title, description, prerequisites, credits, and category. This catalog is an essential resource for both advisors and students to understand the courses offered, their content, and how they fit into the overall curriculum.
 
 2. **Student Record**: A summary of a student's academic history, including the student's ID, courses previously taken with grades, currently enrolled courses, and cumulative GPA. This record is critical for understanding a student's academic journey and assessing their progress toward degree completion.
 
@@ -46,18 +46,15 @@ Before you begin, ensure you have met the following requirements:
 
 * **Operating System**: Windows 10 or higher. The application is developed for the Windows environment and leverages specific system features that are not available in other operating systems.
 
-* **Python Version**: Ensure you have Python installed on your system. This application is compatible with the following Python version:
-
-Python 3.11.9
-
+* **Python Version**: Ensure you have Python version 3.11.9 or higher installed on your system. 
 
 ### Dependencies
 
-* requirements.txt has the list of Python libraries
+* requirements.txt has the list of Python libraries which are used by the application.
 
 ## Installation
 
-To clone the Curriculum Advisor Prototype project, run this command in your terminal:
+To create a clone of the Curriculum Advisor Prototype project, run this command in a DOS window:
 
 ```bash
 git clone https://github.com/nbk5876/AdvisorGPT.git
