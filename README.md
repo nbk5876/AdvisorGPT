@@ -1,6 +1,6 @@
 # AdvisorGPT
 
-This project is a proof of concept to determine the feasibility of using a large language model like ChatGPT together with a conventional programming language like  Python to build an application that can be a tool for scholastic curriculum advisors.
+This project is a proof of concept to determine the feasibility of using a large language model like ChatGPT together with a conventional programming language like  Python to build an application that can serve as a tool for scholastic curriculum advisors.
 
 ## Repository
 
