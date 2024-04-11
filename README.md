@@ -11,7 +11,7 @@ The source code for the Curriculum Advisor Prototype is hosted on GitHub:
 ## Application Flow
 
 
-In steps 1, 2, & 3, the query is created based on input data consisting of the program catalog, the student record and one or more questions from the scholastic advisor.
+In steps 1, 2, & 3, the query is created based on input data consisting of the program catalog, the student record and one or more questions from the scholastic advisor.  In step 4 the query is sent to ChatGPT-4 which evaluates the inputs and returns the resulting analysis to the advisor.
 
 ![Alt text](https://github.com/nbk5876/nbk5876.github.io/blob/main/AdvisorGPT/Advisor_VHigh_Overview.png?raw=true "Advisor Overview")
 
