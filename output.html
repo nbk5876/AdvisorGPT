@@ -145,113 +145,159 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
 	<span class="n">main</span><span class="p">()</span>
 </pre></div></td></tr></table></div>
-<h2>gui.py</h2><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span>
-<span class="normal">53</span>
-<span class="normal">54</span>
-<span class="normal">55</span>
-<span class="normal">56</span>
-<span class="normal">57</span>
-<span class="normal">58</span>
-<span class="normal">59</span>
-<span class="normal">60</span>
-<span class="normal">61</span>
-<span class="normal">62</span>
-<span class="normal">63</span>
-<span class="normal">64</span>
-<span class="normal">65</span>
-<span class="normal">66</span>
-<span class="normal">67</span>
-<span class="normal">68</span>
-<span class="normal">69</span>
-<span class="normal">70</span>
-<span class="normal">71</span>
-<span class="normal">72</span>
-<span class="normal">73</span>
-<span class="normal">74</span>
-<span class="normal">75</span>
-<span class="normal">76</span>
-<span class="normal">77</span>
-<span class="normal">78</span>
-<span class="normal">79</span>
-<span class="normal">80</span>
-<span class="normal">81</span>
-<span class="normal">82</span>
-<span class="normal">83</span>
-<span class="normal">84</span>
-<span class="normal">85</span>
-<span class="normal">86</span>
-<span class="normal">87</span>
-<span class="normal">88</span>
-<span class="normal">89</span>
-<span class="normal">90</span>
-<span class="normal">91</span>
-<span class="normal">92</span>
-<span class="normal">93</span>
-<span class="normal">94</span>
-<span class="normal">95</span>
-<span class="normal">96</span>
-<span class="normal">97</span>
-<span class="normal">98</span></pre></div></td><td class="code"><div><pre><span></span><span class="c1">#============================================================</span>
+<h2>gui.py</h2><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">  1</span>
+<span class="normal">  2</span>
+<span class="normal">  3</span>
+<span class="normal">  4</span>
+<span class="normal">  5</span>
+<span class="normal">  6</span>
+<span class="normal">  7</span>
+<span class="normal">  8</span>
+<span class="normal">  9</span>
+<span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span></pre></div></td><td class="code"><div><pre><span></span><span class="c1">#============================================================</span>
 <span class="c1"># gui.py</span>
 <span class="c1"># Purpose: User Interface</span>
 <span class="c1">#============================================================</span>
 <span class="kn">import</span> <span class="nn">tkinter</span> <span class="k">as</span> <span class="nn">tk</span>
-<span class="kn">from</span> <span class="nn">tkinter</span> <span class="kn">import</span> <span class="n">scrolledtext</span><span class="p">,</span> <span class="n">messagebox</span><span class="p">,</span> <span class="n">Label</span><span class="p">,</span> <span class="n">Entry</span><span class="p">,</span> <span class="n">Button</span>
+<span class="kn">from</span> <span class="nn">tkinter</span> <span class="kn">import</span> <span class="n">scrolledtext</span><span class="p">,</span> <span class="n">messagebox</span><span class="p">,</span> <span class="n">Label</span><span class="p">,</span> <span class="n">Entry</span><span class="p">,</span> <span class="n">Button</span><span class="p">,</span> <span class="n">ttk</span>
+<span class="kn">import</span> <span class="nn">glob</span>
+<span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">from</span> <span class="nn">query</span> <span class="kn">import</span> <span class="n">process_query</span>
 <span class="kn">from</span> <span class="nn">files</span> <span class="kn">import</span> <span class="n">get_course_cat</span>
 <span class="kn">from</span> <span class="nn">files</span> <span class="kn">import</span> <span class="n">get_stu_rec</span>
 <span class="kn">from</span> <span class="nn">util</span> <span class="kn">import</span> <span class="n">reformat_advice</span>
+<span class="kn">from</span> <span class="nn">gui_util</span> <span class="kn">import</span> <span class="n">show_student_record</span><span class="p">,</span> <span class="n">show_program_catalog</span>
 
 <span class="k">def</span> <span class="nf">update_filenames_display</span><span class="p">(</span><span class="n">student_record_filename</span><span class="p">,</span> <span class="n">program_catalog_filename</span><span class="p">):</span>
     <span class="n">student_record_label</span><span class="o">.</span><span class="n">config</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;Student Record: </span><span class="si">{</span><span class="n">student_record_filename</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -266,15 +312,20 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
     <span class="c1">#--------------------------------------</span>
     <span class="c1"># Load names of input files and Get Contents</span>
     <span class="c1">#--------------------------------------</span>
-    <span class="n">program_catalog_filename</span> <span class="o">=</span> <span class="n">program_catalog_filename_entry</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
-    <span class="n">student_record_filename</span> <span class="o">=</span> <span class="n">student_record_filename_entry</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+    <span class="c1">#program_catalog_filename = program_catalog_filename_entry.get()</span>
+    <span class="c1">#student_record_filename = student_record_filename_entry.get()</span>
+
+    <span class="c1"># Fetch selected filenames from Comboboxes</span>
+    <span class="n">program_catalog_filename</span> <span class="o">=</span> <span class="n">program_catalog_combobox</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+    <span class="n">student_record_filename</span> <span class="o">=</span> <span class="n">student_record_combobox</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
 
     <span class="n">course_cat</span> <span class="o">=</span> <span class="n">get_course_cat</span><span class="p">(</span><span class="n">program_catalog_filename</span><span class="p">)</span>
     <span class="n">stu_rec</span> <span class="o">=</span> <span class="n">get_stu_rec</span><span class="p">(</span><span class="n">student_record_filename</span><span class="p">)</span> 
     
-    <span class="c1">#--------------------------------------</span>
-    <span class="c1"># Get the advice for this student</span>
-    <span class="c1">#--------------------------------------</span>
+    <span class="c1">#--------------------------------------------</span>
+    <span class="c1"># Get the advice for this student by calling</span>
+    <span class="c1"># process_query()</span>
+    <span class="c1">#--------------------------------------------</span>
     <span class="n">advice</span> <span class="o">=</span> <span class="n">process_query</span><span class="p">(</span><span class="n">user_query</span><span class="p">,</span> <span class="n">course_cat</span><span class="p">,</span> <span class="n">stu_rec</span><span class="p">)</span>
     <span class="n">reformatted_advice</span> <span class="o">=</span> <span class="n">reformat_advice</span><span class="p">(</span><span class="n">advice</span><span class="p">)</span> <span class="c1"># Make Pretty Print</span>
 
@@ -283,7 +334,18 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
     <span class="n">result_text</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">tk</span><span class="o">.</span><span class="n">END</span><span class="p">,</span> <span class="n">reformatted_advice</span><span class="p">)</span>
     <span class="n">result_text</span><span class="o">.</span><span class="n">config</span><span class="p">(</span><span class="n">state</span><span class="o">=</span><span class="n">tk</span><span class="o">.</span><span class="n">DISABLED</span><span class="p">)</span>
 
+<span class="k">def</span> <span class="nf">update_combobox</span><span class="p">(</span><span class="n">combobox</span><span class="p">,</span> <span class="n">pattern</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Update the given combobox with files matching the pattern in the current folder.&quot;&quot;&quot;</span>
+    <span class="n">files</span> <span class="o">=</span> <span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="n">pattern</span><span class="p">)</span>
+    <span class="n">combobox</span><span class="p">[</span><span class="s1">&#39;values&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">files</span>
+    <span class="k">if</span> <span class="n">files</span><span class="p">:</span>
+        <span class="n">combobox</span><span class="o">.</span><span class="n">current</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>  <span class="c1"># Optionally, set the current selection to the first file</span>
+
+<span class="c1">#=============================================================================</span>
+<span class="c1">#</span>
 <span class="c1"># Create the main window</span>
+<span class="c1">#</span>
+<span class="c1">#=============================================================================</span>
 <span class="n">root</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Tk</span><span class="p">()</span>
 <span class="n">root</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Advisor App&quot;</span><span class="p">)</span>
 
@@ -296,21 +358,45 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <span class="n">root</span><span class="o">.</span><span class="n">grid_columnconfigure</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">weight</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">root</span><span class="o">.</span><span class="n">grid_columnconfigure</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">weight</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>  <span class="c1"># Give more weight to result_text column</span>
 
-<span class="c1"># Widgets for student record </span>
+<span class="c1">#----------------------------------</span>
+<span class="c1"># File Specs </span>
+<span class="c1"># Student Record*.csv</span>
+<span class="c1"># Course Catalog*.csv</span>
+<span class="c1">#----------------------------------</span>
+
+<span class="c1"># Combobox for selecting a student record file</span>
 <span class="n">student_record_label</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Student Record:&quot;</span><span class="p">)</span>
 <span class="n">student_record_label</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">sticky</span><span class="o">=</span><span class="s1">&#39;e&#39;</span><span class="p">)</span>
-<span class="n">student_record_filename_entry</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Entry</span><span class="p">(</span><span class="n">root</span><span class="p">)</span>
-<span class="c1">#student_record_filename_entry.insert(0, &quot;Student Record S001.csv&quot;)  # Default filename</span>
-<span class="n">student_record_filename_entry</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;Student Record S002.csv&quot;</span><span class="p">)</span>  <span class="c1"># Default filename</span>
-<span class="n">student_record_filename_entry</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">sticky</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">)</span>
 
-<span class="c1"># Widgets for program catalog</span>
+<span class="n">student_record_combobox</span> <span class="o">=</span> <span class="n">ttk</span><span class="o">.</span><span class="n">Combobox</span><span class="p">(</span><span class="n">root</span><span class="p">)</span>
+<span class="n">student_record_combobox</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">sticky</span><span class="o">=</span><span class="s1">&#39;ew&#39;</span><span class="p">)</span>
+
+<span class="c1"># Combobox for selecting a course catalog file</span>
 <span class="n">program_catalog_label</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Program Catalog:&quot;</span><span class="p">)</span>
-<span class="n">program_catalog_label</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">sticky</span><span class="o">=</span><span class="s1">&#39;e&#39;</span><span class="p">)</span>
-<span class="n">program_catalog_filename_entry</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Entry</span><span class="p">(</span><span class="n">root</span><span class="p">)</span>
-<span class="c1">#program_catalog_filename_entry.insert(0, &quot;Course Catalog Electronics.csv&quot;)  # Default filename</span>
-<span class="n">program_catalog_filename_entry</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;Course Catalog Business AA.csv&quot;</span><span class="p">)</span>  <span class="c1"># Default filename</span>
-<span class="n">program_catalog_filename_entry</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">sticky</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">)</span>
+<span class="n">program_catalog_label</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">sticky</span><span class="o">=</span><span class="s1">&#39;e&#39;</span><span class="p">)</span>
+
+<span class="n">program_catalog_combobox</span> <span class="o">=</span> <span class="n">ttk</span><span class="o">.</span><span class="n">Combobox</span><span class="p">(</span><span class="n">root</span><span class="p">)</span>
+<span class="n">program_catalog_combobox</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">sticky</span><span class="o">=</span><span class="s1">&#39;ew&#39;</span><span class="p">)</span>
+
+<span class="c1"># Populate comboboxes with files</span>
+<span class="n">update_combobox</span><span class="p">(</span><span class="n">student_record_combobox</span><span class="p">,</span> <span class="s2">&quot;Student Record*.csv&quot;</span><span class="p">)</span>
+<span class="n">update_combobox</span><span class="p">(</span><span class="n">program_catalog_combobox</span><span class="p">,</span> <span class="s2">&quot;Course Catalog*.csv&quot;</span><span class="p">)</span>
+
+<span class="c1"># Create button to show the student record in a popup</span>
+<span class="n">btn_show_student_record</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span>
+    <span class="n">root</span><span class="p">,</span>
+    <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Show Student Record&quot;</span><span class="p">,</span>
+    <span class="n">command</span><span class="o">=</span><span class="k">lambda</span><span class="p">:</span> <span class="n">show_student_record</span><span class="p">(</span><span class="n">student_record_combobox</span><span class="p">)</span>  <span class="c1"># Pass the combobox as an argument</span>
+<span class="p">)</span>
+<span class="n">btn_show_student_record</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">sticky</span><span class="o">=</span><span class="s1">&#39;ew&#39;</span><span class="p">,</span> <span class="n">padx</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">pady</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+
+<span class="c1"># Create button to show the program catalog in a popup</span>
+<span class="n">btn_show_program_catalog</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span>
+    <span class="n">root</span><span class="p">,</span>
+    <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Show Program Catalog&quot;</span><span class="p">,</span>
+    <span class="n">command</span><span class="o">=</span><span class="k">lambda</span><span class="p">:</span> <span class="n">show_program_catalog</span><span class="p">(</span><span class="n">program_catalog_combobox</span><span class="p">)</span>  <span class="c1"># Pass the combobox as an argument</span>
+<span class="p">)</span>
+<span class="n">btn_show_program_catalog</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">sticky</span><span class="o">=</span><span class="s1">&#39;ew&#39;</span><span class="p">,</span> <span class="n">padx</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">pady</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
 
 <span class="c1"># Query label and text box</span>
 <span class="n">query_label</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Enter your query:&quot;</span><span class="p">)</span>
@@ -340,6 +426,58 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <span class="c1"># Start the GUI event loop</span>
 <span class="c1">#-----------------------------</span>
 <span class="n">root</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>
+</pre></div></td></tr></table></div>
+<h2>gui_util.py</h2><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span></pre></div></td><td class="code"><div><pre><span></span><span class="c1">#============================================================</span>
+<span class="c1"># gui_util.py</span>
+<span class="c1"># Purpose: User Interface</span>
+<span class="c1">#============================================================</span>
+<span class="kn">import</span> <span class="nn">tkinter</span> <span class="k">as</span> <span class="nn">tk</span>
+<span class="kn">import</span> <span class="nn">csv</span>
+
+<span class="k">def</span> <span class="nf">show_csv_in_popup</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">title</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Display the content of a CSV file in a popup window.&quot;&quot;&quot;</span>
+    <span class="n">popup</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Toplevel</span><span class="p">()</span>
+    <span class="n">popup</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+    <span class="n">text_area</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Text</span><span class="p">(</span><span class="n">popup</span><span class="p">)</span>
+    <span class="n">text_area</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">expand</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">)</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">reader</span><span class="p">:</span>
+            <span class="n">text_area</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">tk</span><span class="o">.</span><span class="n">END</span><span class="p">,</span> <span class="s1">&#39;,&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">row</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">text_area</span><span class="o">.</span><span class="n">config</span><span class="p">(</span><span class="n">state</span><span class="o">=</span><span class="n">tk</span><span class="o">.</span><span class="n">DISABLED</span><span class="p">)</span>  <span class="c1"># Make the text read-only</span>
+
+<span class="k">def</span> <span class="nf">show_student_record</span><span class="p">(</span><span class="n">student_record_combobox</span><span class="p">):</span>
+    <span class="n">filename</span> <span class="o">=</span> <span class="n">student_record_combobox</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+    <span class="n">show_csv_in_popup</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s2">&quot;Student Record&quot;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">show_program_catalog</span><span class="p">(</span><span class="n">program_catalog_combobox</span><span class="p">):</span>
+    <span class="n">filename</span> <span class="o">=</span> <span class="n">program_catalog_combobox</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+    <span class="n">show_csv_in_popup</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s2">&quot;Program Catalog&quot;</span><span class="p">)</span>
 </pre></div></td></tr></table></div>
 <h2>files.py</h2><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
 <span class="normal"> 2</span>

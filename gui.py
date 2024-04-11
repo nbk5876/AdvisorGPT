@@ -10,6 +10,7 @@ from query import process_query
 from files import get_course_cat
 from files import get_stu_rec
 from util import reformat_advice
+from gui_util import show_student_record, show_program_catalog
 
 def update_filenames_display(student_record_filename, program_catalog_filename):
     student_record_label.config(text=f"Student Record: {student_record_filename}")
@@ -53,10 +54,11 @@ def update_combobox(combobox, pattern):
     if files:
         combobox.current(0)  # Optionally, set the current selection to the first file
 
-
-
-
+#=============================================================================
+#
 # Create the main window
+#
+#=============================================================================
 root = tk.Tk()
 root.title("Advisor App")
 
@@ -75,39 +77,47 @@ root.grid_columnconfigure(4, weight=3)  # Give more weight to result_text column
 # Course Catalog*.csv
 #----------------------------------
 
-# Widgets for student record 
-#student_record_label = tk.Label(root, text="Student Record:")
-#student_record_label.grid(row=0, column=0, sticky='e')
-#student_record_filename_entry = tk.Entry(root)
-#student_record_filename_entry.insert(0, "Student Record S001.csv")  # Default filename
-#student_record_filename_entry.insert(0, "Student Record S002.csv")  # Default filename
-#student_record_filename_entry.grid(row=0, column=1, sticky='w')
-
-# Widgets for program catalog
-#program_catalog_label = tk.Label(root, text="Program Catalog:")
-#program_catalog_label.grid(row=0, column=2, sticky='e')
-#program_catalog_filename_entry = tk.Entry(root)
-#program_catalog_filename_entry.insert(0, "Course Catalog Electronics.csv")  # Default filename
-#program_catalog_filename_entry.insert(0, "Course Catalog Business AA.csv")  # Default filename
-#program_catalog_filename_entry.grid(row=0, column=3, sticky='w')
-
 # Combobox for selecting a student record file
 student_record_label = tk.Label(root, text="Student Record:")
-student_record_label.grid(row=0, column=0, sticky='e')
+student_record_label.grid(row=0, column=1, sticky='e')
 
 student_record_combobox = ttk.Combobox(root)
-student_record_combobox.grid(row=0, column=1, sticky='ew')
+student_record_combobox.grid(row=0, column=2, sticky='ew')
 
 # Combobox for selecting a course catalog file
 program_catalog_label = tk.Label(root, text="Program Catalog:")
-program_catalog_label.grid(row=1, column=0, sticky='e')
+program_catalog_label.grid(row=1, column=1, sticky='e')
 
 program_catalog_combobox = ttk.Combobox(root)
-program_catalog_combobox.grid(row=1, column=1, sticky='ew')
+program_catalog_combobox.grid(row=1, column=2, sticky='ew')
 
 # Populate comboboxes with files
 update_combobox(student_record_combobox, "Student Record*.csv")
 update_combobox(program_catalog_combobox, "Course Catalog*.csv")
+
+#--------------------
+# SHOW Popups
+#--------------------
+
+# Create button to show the student record in a popup
+btn_show_student_record = tk.Button(
+    root,
+    text="Show Student Record",
+    command=lambda: show_student_record(student_record_combobox)  # Pass the combobox as an argument
+)
+#btn_show_student_record.grid(row=2, column=0, sticky='ew', padx=5, pady=5)
+#btn_show_student_record.grid(row=2, column=2, sticky='ew', padx=5, pady=5)
+btn_show_student_record.grid(row=0, column=3, sticky='ew', padx=5, pady=5)
+
+# Create button to show the program catalog in a popup
+btn_show_program_catalog = tk.Button(
+    root,
+    text="Show Program Catalog",
+    command=lambda: show_program_catalog(program_catalog_combobox)  # Pass the combobox as an argument
+)
+#btn_show_program_catalog.grid(row=3, column=0, sticky='ew', padx=5, pady=5)
+#btn_show_program_catalog.grid(row=2, column=3, sticky='ew', padx=5, pady=5)
+btn_show_program_catalog.grid(row=1, column=3, sticky='ew', padx=5, pady=5)
 
 # Query label and text box
 query_label = tk.Label(root, text="Enter your query:")
@@ -121,14 +131,15 @@ default_question = "Student S001 is an Electronics Technician Associate degree c
 query_text.insert(tk.END, default_question)
 
 submit_button = tk.Button(root, text="Submit", command=on_submit)
-submit_button.grid(row=3, column=0, columnspan=4, sticky='ew', padx=5, pady=(5, 0))
+#submit_button.grid(row=3, column=0, columnspan=4, sticky='ew', padx=5, pady=(5, 0))
+submit_button.grid(row=3, column=0, columnspan=4, sticky='ew', padx=5, pady=(5, 5))
 
 # Result label and text box
 result_label = tk.Label(root, text="Advice:")
 result_label.grid(row=4, column=0, sticky='w', padx=5, pady=(5, 0))
 
 result_text = scrolledtext.ScrolledText(root, height=30, wrap=tk.WORD, state=tk.DISABLED)
-result_text.grid(row=5, column=0, columnspan=5, sticky='nsew', padx=5, pady=5)
+result_text.grid(row=5, column=0, columnspan=4, sticky='nsew', padx=5, pady=5)
 
 # Set grid row and column configuration for resizing behavior
 root.grid_rowconfigure(3, weight=0)
