@@ -11,6 +11,8 @@ The source code for the Curriculum Advisor Prototype is hosted on GitHub:
 ## Application Flow
 
 
+In steps 1, 2, & 3, the query is created based on input data consisting of the program catalog, the student record and one or more questions from the scholastic advisor.
+
 ![Alt text](https://github.com/nbk5876/nbk5876.github.io/blob/main/AdvisorGPT/Advisor_VHigh_Overview.png?raw=true "Advisor Overview")
 
 ---
