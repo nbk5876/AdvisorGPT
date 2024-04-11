@@ -13,6 +13,7 @@ The source code for the Curriculum Advisor Prototype is hosted on GitHub:
 
 ![Alt text](https://github.com/nbk5876/nbk5876.github.io/blob/main/AdvisorGPT/Advisor_VHigh_Overview.png?raw=true "Advisor Overview")
 
+---
 
 ![Alt text](https://github.com/nbk5876/nbk5876.github.io/blob/main/AdvisorGPT/Advisor_Overview.png?raw=true "Advisor Overview")
 
