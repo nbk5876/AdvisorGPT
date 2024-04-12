@@ -1,0 +1,19 @@
+Use Cases for Testing Purposes
+------------------------------
+
+Use Case #1 (Student 1, Electronics AA)
+----------------------------------------
+Given Student Record S001.csv and Course Catalog Electronics.csv, what classes should this student take in order to be positioned to graduate on schedule?  What classes are missing?  Also, we have been notified by the school that PHY101 is no longer availible.  Will this impact the student?
+
+Use Case #2 (Student 1, Electronics AA)
+----------------------------------------
+What classes should this student take in order to be positioned to graduate on schedule?  What classes are missing? Also, does the student really need to complete ET201 and ETE101?
+
+Use Case #3 (Student 2, Business AA)
+----------------------------------------
+Given Student Record S002.csv and Course Catalog Business AA.csv, what classes should this student take in order to be positioned to graduate on schedule?
+
+Use Case #4 (Student 2, Business AA)
+----------------------------------------
+Given Student Record S002.csv and Course Catalog Business AA.csv, the student believes they should be able to swap BUS108 for ET202. Is this permitted? Here is the catalog entry for ET202: 
+ET202,Communication Systems,Principles of analog and digital communication systems,ET102,3,Core

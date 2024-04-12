@@ -20,6 +20,6 @@ def reformat_advice(advice_text):
     return reformatted_text
 
 # Example usage
-unformatted_advice = "Your unformatted advice text here..."
-formatted_advice = reformat_advice(unformatted_advice)
-print(formatted_advice)
+#unformatted_advice = "Your unformatted advice text here..."
+#formatted_advice = reformat_advice(unformatted_advice)
+#print(formatted_advice)
