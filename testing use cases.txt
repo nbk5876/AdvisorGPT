@@ -1,5 +1,5 @@
-Use Cases for Testing Purposes
-------------------------------
+Advisor Use Cases for Testing Purposes
+======================================
 
 Use Case #1 (Student 1, Electronics AA)
 ----------------------------------------

@@ -1,6 +1,6 @@
 #============================================================
 # gui.py
-# Purpose: User Interface
+# Purpose: AdvisorGPT User Interface
 #============================================================
 import tkinter as tk
 from tkinter import scrolledtext, messagebox, Label, Entry, Button, ttk
@@ -22,16 +22,34 @@ def on_save():
 
 def email_advice():
     # Get the content to be emailed
-    advice_content = result_text.get("1.0", tk.END)  # Replace with actual advice retrieval
-    #advice_content = "TEST EMAIL FROM ADVISOR"
+    #advice_content = result_text.get("1.0", tk.END)  # Replace with actual advice retrieval
+
+    # Retrieve values from GUI elements
+    student_record = student_record_combobox.get()
+    program_catalog = program_catalog_combobox.get()
+    query = query_text.get("1.0", tk.END).strip()
+    result = result_text.get("1.0", tk.END).strip()
+
+    # Format the email body
+    email_body = f"""Advisor App Session Summary:
+
+Student Transcript: {student_record}
+Program Planner: {program_catalog}
+
+Your Query:
+{query}
+
+Advice Given:
+{result}
+"""
+
+    # Send the email
     subject = "Your Advisor App Session"
     to_email = "nbk5876@outlook.com"
     from_email = os.getenv("EMAIL_FROM_ACCOUNT")
     from_password = os.getenv("GMAIL_APP_PASSWORD")
 
-    # Send the email
-    send_email(subject, advice_content, to_email, from_email, from_password)
-
+    send_email(subject, email_body, to_email, from_email, from_password)
 
 def on_submit():
     user_query = query_text.get("1.0", tk.END).strip()
@@ -42,8 +60,6 @@ def on_submit():
     #--------------------------------------
     # Load names of input files and Get Contents
     #--------------------------------------
-    #program_catalog_filename = program_catalog_filename_entry.get()
-    #student_record_filename = student_record_filename_entry.get()
 
     # Fetch selected filenames from Comboboxes
     program_catalog_filename = program_catalog_combobox.get()
@@ -144,7 +160,7 @@ default_question = "What classes should this student take in order to be positio
 query_text.insert(tk.END, default_question)
 
 # Submit Button
-submit_button = tk.Button(root, text="Submit", command=on_submit)
+submit_button = tk.Button(root, text="Submit Query", command=on_submit)
 submit_button.grid(row=3, column=0, columnspan=3, sticky='ew', padx=5, pady=(5, 5))
 
 # Save Button
