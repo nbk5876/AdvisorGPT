@@ -1,0 +1,17 @@
+Course Name,Course ID,Credits,Typically Offered,Description,Prerequisites,Category
+Introduction to Business,BUS101,5,Summer/Fall/Winter/Spring,"Provides an overview of the business environment, including management, marketing, and economics.",None,Core
+Human Relations in Business,BUS104,5,Summer/Fall/Winter/Spring,"Focuses on interpersonal skills, critical for success in the workplace.",None,Core
+Business Mathematics,BUS102,5,Fall/Winter/Spring,"Covers essential mathematical skills needed in business, including algebra and statistics.",None,Core
+Principles of Marketing,BUS120,5,Fall/Winter,"Introduces fundamental marketing concepts and strategies.",None,Core
+Retail Marketing,BUS135,5,Winter,"Examines retail management and marketing strategies.","Principles of Marketing",Elective
+Systems Thinking,BUS160,5,Fall,"Explores systems theory and its applications in business decision-making.",None,Core
+Project Management I,BUS180,5,Fall,"Introduces basic principles and techniques of project management.",None,Core
+Business Law,BUS201,5,Summer/Fall/Winter/Spring,"Covers legal issues in business, including contracts, sales, and property.",None,Core
+Advertising and Sales Promotion,BUS220,5,Spring,"Focuses on advertising and sales promotion techniques and their effectiveness.","Principles of Marketing",Elective
+Relationship Marketing,BUS225,5,Fall,"Examines relationship marketing strategies and their application in business environments.","Principles of Marketing",Elective
+Introduction to e-Business,BUS240,5,Fall,"Provides an overview of e-commerce and conducting business online.",None,Elective
+Social Media Marketing,BUS247,5,Winter,"Covers strategies for effective marketing on social media platforms.","Principles of Marketing",Elective
+Digital Marketing,BUS248,5,Spring,"Explores digital marketing tools and techniques, including SEO and SEM.","Principles of Marketing",Elective
+Market Research,BUS249,5,Spring,"Introduces methods and techniques for conducting market research.","Principles of Marketing",Elective
+Principles of Accounting I,ACCT201,5,Summer/Fall/Winter/Spring,"Introduces financial accounting and reporting.",None,Core
+Principles of Accounting III,ACCT203,5,Summer/Fall/Winter/Spring,"Continues the exploration of accounting principles, focusing on managerial accounting.","Principles of Accounting I",Core

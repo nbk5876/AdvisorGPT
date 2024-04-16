@@ -17,3 +17,14 @@ Use Case #4 (Student 2, Business AA)
 ----------------------------------------
 Given Student Record S002.csv and Course Catalog Business AA.csv, the student believes they should be able to swap BUS108 for ET202. Is this permitted? Here is the catalog entry for ET202: 
 ET202,Communication Systems,Principles of analog and digital communication systems,ET102,3,Core
+
+Use Case #5+ (Student 3, Marketing AAAS)
+----------------------------------------
+Give me an overview of this student's position to graduate at the end of their 2nd year
+
+What classes in Marketing are part of general education core requirements?
+
+The student wants to take ET202 instead of BUS247.  Can this be allowed?
+
+The student wants to take retail marketing next quarter.
+
