@@ -1,6 +1,6 @@
 # AdvisorGPT
 
-This project is a proof of concept to determine the feasibility of using a large language model like ChatGPT together with a conventional programming language like  Python to build an application that can serve as a tool for scholastic curriculum advisors.
+This project is a proof of concept to determine the feasibility of using a large language model like ChatGPT together with a conventional programming language like  Python to build an application that can serve as a tool for curriculum advisors in higher education settings.
 
 ## Repository
 
@@ -54,28 +54,21 @@ Before you begin, ensure you have met the following requirements:
 
 ## Installation
 
-To create a clone of the Curriculum Advisor Prototype project, run this command in a DOS window:
+Here are steps to set the environment and run the application.
 
 ```bash
-git clone https://github.com/nbk5876/AdvisorGPT.git
-
-### Executing program
-
-* python gui.py
-
-
-1. Set OPENAI_API_KEY into the Environment using
+1. Set OPENAI_API_KEY into the Environment using the
    system envionment variable editor
 
-2. Create Github folder and CD into it with:
-      cd THISPC\OneDrive\Documents\Tony\Github\AdvisorGPT
+2. Create a Github folder and CD into it with:
+      cd THISPC\PATH\Github\AdvisorGPT
 
 3. git clone https://github.com/nbk5876/AdvisorGPT.git
 
 4. CD into AdvisorGPT and RUN:
       python -m venv venv
          Note: This command creates a new folder named venv in the
-         project directory, where all the virtual environment files
+         project directory, where all virtual environment files
          will be stored.
 
 5. .\venv\Scripts\activate
