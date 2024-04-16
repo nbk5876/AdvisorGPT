@@ -63,3 +63,24 @@ git clone https://github.com/nbk5876/AdvisorGPT.git
 
 * python gui.py
 
+
+1. Set OPENAI_API_KEY into the Environment using
+   system envionment variable editor
+
+2. Create Github folder and CD into it with:
+      cd THISPC\OneDrive\Documents\Tony\Github\AdvisorGPT
+
+3. git clone https://github.com/nbk5876/AdvisorGPT.git
+
+4. CD into AdvisorGPT and RUN:
+      python -m venv venv
+         Note: This command creates a new folder named venv in the
+         project directory, where all the virtual environment files
+         will be stored.
+
+5. .\venv\Scripts\activate
+
+6. pip install -r requirements.txt
+
+7. python gui.py
+
