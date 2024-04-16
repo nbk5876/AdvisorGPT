@@ -4,14 +4,14 @@ This project is a proof of concept to determine the feasibility of using a large
 
 ## Repository
 
-The source code for the Curriculum Advisor Prototype is hosted on GitHub:
+Source code for the Curriculum Advisor Prototype is hosted on GitHub:
 
 [https://github.com/nbk5876/AdvisorGPT](https://github.com/nbk5876/AdvisorGPT)
 
 ## Application Flow
 
 
-In steps 1, 2, & 3, the query is created based on input data consisting of the program catalog, the student record and one or more questions from the scholastic advisor.  In step 4 the query is sent to ChatGPT-4 which evaluates the inputs and returns the resulting analysis to the advisor.
+In steps 1, 2, & 3, a query is created based on input data consisting of the program catalog, the student record and one or more questions from the scholastic advisor.  In step 4 the query is sent to ChatGPT-4 which evaluates these inputs and returns the resulting analysis to the advisor.
 
 ![Alt text](https://github.com/nbk5876/nbk5876.github.io/blob/main/AdvisorGPT/Advisor_VHigh_Overview.png?raw=true "Advisor Overview")
 
@@ -54,7 +54,7 @@ Before you begin, ensure you have met the following requirements:
 
 ## Installation
 
-Here are steps to set the environment and run the application.
+Here are steps to set up the environment and run the application.
 
 ```bash
 1. Set OPENAI_API_KEY into the Environment using the
