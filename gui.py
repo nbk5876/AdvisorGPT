@@ -46,8 +46,8 @@ Advice Given:
 """
 
     # Send the email
-    subject = "Your Advisor App Session"
-    to_email = "nbk5876@outlook.com"
+    subject = "AdvisorGPT Session Summary"
+    to_email = os.getenv("EMAIL_TO_ACCOUNT")
     from_email = os.getenv("EMAIL_FROM_ACCOUNT")
     from_password = os.getenv("GMAIL_APP_PASSWORD")
 
