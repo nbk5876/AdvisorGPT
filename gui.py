@@ -1,8 +1,9 @@
 #============================================================
 # gui.py
-# Purpose: AdvisorGPT User Interface
-# Author:  Tony Byorick
-# Website: https://nbk5876.wixsite.com/aife/post/advisorgpt
+# Purpose:     AdvisorGPT User Interface
+# Author:      Tony Byorick
+# Github Repo: https://github.com/nbk5876/AdvisorGPT
+# Website:     https://nbk5876.wixsite.com/aife/post/advisorgpt
 #============================================================
 import tkinter as tk
 from tkinter import scrolledtext, messagebox, Label, Entry, Button, ttk
