@@ -16,7 +16,7 @@ def send_email(subject, body, to_email):
 
     print(f"Running send_email with {subject}{body}{to_email}")
 
-    from_email = "tony.byorick@gmail.com"
+    from_email = "bbb.bbb@gmail.com"
     from_password = "edtljfdtedukwpcr"  # Use the App Password you generated
 
     current_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -37,13 +37,11 @@ def send_email(subject, body, to_email):
         server.login(from_email, from_password)
         server.sendmail(from_email, to_email, message.as_string())
 
-
 body_content = "Test Message"
 
 # Usage
 send_email(
     subject="Advisor Message",
-    #body="The quick brown fox jumped over the moon",
     body=body_content,
-    to_email="nbk5876@outlook.com"
+    to_email="999999@outlook.com"
 )
